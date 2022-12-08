@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Proyecto js </title>
+</head>
+<body>
+  <h1>Supermercado Javasis</h1>
+  <div class="formulario">
+    <h2>Compra</h2>
+    <form id="lista">
+      <div>
+        <label for="nombre">Nombre del producto</label>
+        <input type="text" name="nombre" id="nombre" value="" required>
+      </div>
+
+      <div>
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio" value="">
+      </div>
+
+      <div>
+        <label for="cantidad">Cantidad</label>
+        <input type="text" name="cantidad" id="cantidad" value="">
+      </div>
+
+      <div>
+        <label for="categoria">Categoría</label>
+        <select name="categoria">
+          <option value="No definida"></option>
+          <option value="Comida">Comida</option>
+          <option value="Ropa">Ropa</option>
+          <option value="Licores">Licores</option>
+          <option value="Accesorios">Accesorios</option>
+        </select>
+      </div>
+      <div>
+        <label for="descripcion">Descripción</label>
+        <textarea type="text" name="descripcion" id="descripcion" placeholder="Descripcion aqui" value=""></textarea>
+      </div>
+      <input type="submit" name="enviar" value="Añadir" class="button añadir" />
+    </form>
+    <!-- <button onclick="agregarProducto()"></button> -->
+  </div>
+  <div class="list-container">
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
