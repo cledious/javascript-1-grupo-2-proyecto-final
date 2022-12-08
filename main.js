@@ -8,8 +8,8 @@
 let articulos = [];
 let busquedas = []; 
 
-
 const form = document.getElementById("lista");
+const botones = document.getElementsByClassName('boton');
 
 //Este evento lo que realiza es que los productos se agregen a la hora de tocar el boton de submit.
 
@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   agregar() //funcion de agregar.
   imprimir() //funcion de imprimir.
+  remover();
 })
 
 //Creamos una funcion que nos va a permitir ingresar los datos.
@@ -58,7 +59,20 @@ function imprimir() {
   }) // el return lo que realiza es retornar los datos ingresados a la finalizar la funcion.
   productList.innerHTML = hoja // .innerHTML lo que permite es imprimir los datos directamente en el HTML. 
 }
+//creamos funcion de eliminar
 
+function remover() {
+  let elem = document.getElementsByClassName('boton');
+
+  for (let i = 0; i < articulos.length; ++i) {
+      if(elem.length) {
+        elem[i].addEventListener('click', function() {
+            elem[i].parentNode.remove()
+            articulos.splice(i, 1) 
+        });
+      }
+  }
+}
 
 //==========================================//
 
