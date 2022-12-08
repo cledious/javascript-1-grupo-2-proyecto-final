@@ -31,3 +31,21 @@ function agregar() {
       form.reset(); //el .reset lo que hace es que a la hora de enviar el formulario se limpie los espacios.
   }
 }
+
+//Creamos una funcion que nos va a permitir imprimir los datos.
+
+function imprimir() {
+  const productList = document.querySelector(".list-container") //devuelve el primer elemento que cumpla con lo que estamos indicando.
+
+  const hoja = articulos.map(elementos => { //el .map lo que hace es recorrer el array y devolver un valor.
+    return ` 
+    <p> Nombre de producto:  ${elementos.nombre} </p>
+    <p> Precio: ₡ ${elementos.precio} </p>
+    <p> Cantidad de producto: ${elementos.cantidad} </p>
+    <p> Categoria: ${elementos.categoria} </p>
+    <p> Descripción: ${elementos.descripcion} </p>
+    <button class="boton"> borrar </button>
+    `
+  }) // el return lo que realiza es retornar los datos ingresados a la finalizar la funcion.
+  productList.innerHTML = hoja // .innerHTML lo que permite es imprimir los datos directamente en el HTML. 
+}
