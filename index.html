@@ -1,119 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.scss/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Proyecto js </title>
 </head>
 <body>
-    <h1>
-        backpage
-    </h1>
-    <main class="page">
-        <section class="backpage">
-            <form action="">
-                <label for="">nombre</label>
-                <input type="text">
-                <label for="">precio</label>
-                <input type="number">
-                <label for="">descripcion</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <select name="" id="" >
-                    <option value="categoria">categoria</option>
-                    <option value="">abarrotes</option>
-                    <option value="">mascotas</option>
-                </select>
-                <label for="">cantidad</label>
-                <input type="number">
-                <input id="btn" type="button" onclick="" value="agregar">
-            </form>
-        </section>
-        <section class="clientpage">
-            <header class="clientpage__header">
-                <a href="#">
-                    <img src="./img/image 1.png" alt="">
-                </a>
-                <div class="searchbar">
-                    <div class="categoria">
-                        categoria
-                    </div>
-                    <div class="bar">
-                        en que te podemos ayudar?
-                    </div>
-                    <div class="search">
-                        buscar      
-                    </div>
-                </div>
-                <a href="" id="cart">
-                    carrito
-                </a>
-            </header>
-            <section class="filter">
-                <p>
-                    listar por
-                </p>
-                <div>
-                    <p>
-                        precio
-                    </p>
-                    <p>
-                        fecha
-                    </p>
-                </div>
-            </section>
-            <div class="products-searched">
-                <div class="product--searched">
-                    <h2>
-                        productos recientes
-                    </h2>
-                    <div class="container-products">
-                        <div class="product">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list-product--category">
-                <div class="product-category">
-                    <h2>
-                        categoria de producto
-                    </h2>
-                    <div class="container-products">
-                        <div class="product">
-                        </div>
-                    </div>
-                </div>
-                <div class="product-category">
-                    <h2>
-                        categoria de producto
-                    </h2>
-                    <div class="container-products">
-                        <div class="product">
-                        </div>
-                    </div>
-                </div>
-                <div class="product-category">
-                    <h2>
-                        categoria de producto
-                    </h2>
-                    <div class="container-products">
-                        <div class="product">
-                        </div>
-                    </div>
-                </div>
-                <div class="product-category">
-                    <h2>
-                        categoria de producto
-                    </h2>
-                    <div class="container-products">
-                        <div class="product">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
+  <h1>Supermercado Javasis</h1>
+  <div class="formulario">
+    <h2>Compra</h2>
+    <form id="lista">
+      <div>
+        <label for="nombre">Nombre del producto</label>
+        <input type="text" name="nombre" id="nombre" value="" required>
+      </div>
+
+      <div>
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio" value="">
+      </div>
+
+      <div>
+        <label for="cantidad">Cantidad</label>
+        <input type="text" name="cantidad" id="cantidad" value="">
+      </div>
+
+      <div>
+        <label for="categoria">Categoría</label>
+        <select name="categoria">
+          <option value="No definida"></option>
+          <option value="Comida">Comida</option>
+          <option value="Ropa">Ropa</option>
+          <option value="Licores">Licores</option>
+          <option value="Accesorios">Accesorios</option>
+        </select>
+      </div>
+      <div>
+        <label for="descripcion">Descripción</label>
+        <textarea type="text" name="descripcion" id="descripcion" placeholder="Descripcion aqui" value=""></textarea>
+      </div>
+      <input type="submit" name="enviar" value="Añadir" class="button añadir" />
+    </form>
+    <!-- <button onclick="agregarProducto()"></button> -->
+  </div>
+  <div class="list-container">
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
