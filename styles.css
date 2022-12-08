@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(https://wallpaperaccess.com/full/1624873.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fbfbfb;
+}
+
+h2 {
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: tomato;
+}
+
+form label {
+    display: block;
+    border: 9rem;
+    text-align: justify;
+    color: rgb(6, 6, 6)
+}
+
+form {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    width: 35%;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    border-width: 5px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.995);
+    width: 100%;
+    height: 40px;
+    border: 5px solid tomato;
+    border-width: 1.5px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+select {
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: tomato;
+    padding-left: 10px;
+    background-color: #fdfdfd;
+    float: left;
+}
+
+textarea {
+    background-color: #fdfdfd;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: tomato;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+label {
+    display: block;
+    float: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    padding: 10px 0%;
+}
+
+.button {
+    border-radius: 2rem;
+    border-color: tomato;
+    background-color: rgb(255, 217, 173);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fbfbfb;
+}
+
+.añadir {
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.eliminar {
+    font-size: 16px;
+    width: 50%;
+    margin: 5px auto;
+}
+
+.list-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 2px;
+    row-gap: 30px;
+    grid-auto-rows: 18rem;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+
+}
+
+.list-container>div {
+    width: 200px;
+    height: fit-content;
+    background: #fbfbfb;
+    grid-column: span 2;
+    border: 2px solid tomato;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
