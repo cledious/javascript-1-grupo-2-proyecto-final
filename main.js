@@ -6,7 +6,7 @@
 
 
 let articulos = [];
-let busquedas = [];
+let busquedas = []; 
 
 
 const form = document.getElementById("lista");
