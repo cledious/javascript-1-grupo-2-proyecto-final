@@ -1,6 +1,12 @@
 //Creamos un array vacio para incgresar los objetos.
 
+
+
+//==========================================//
+
+
 let articulos = [];
+let busquedas = [];
 
 
 const form = document.getElementById("lista");
@@ -27,9 +33,10 @@ function agregar() {
           productos[info.name] = info.value;
         }
       })
-      articulos.push(productos) //aqui ingresamos los objetos al array vacio.
+      articulos.push(productos); //aqui ingresamos los objetos al array vacio.
+      busquedas.push(productos);
       form.reset(); //el .reset lo que hace es que a la hora de enviar el formulario se limpie los espacios.
-  }
+   }
 }
 
 //Creamos una funcion que nos va a permitir imprimir los datos.
@@ -39,13 +46,44 @@ function imprimir() {
 
   const hoja = articulos.map(elementos => { //el .map lo que hace es recorrer el array y devolver un valor.
     return ` 
+    <div>
     <p> Nombre de producto:  ${elementos.nombre} </p>
     <p> Precio: ₡ ${elementos.precio} </p>
     <p> Cantidad de producto: ${elementos.cantidad} </p>
     <p> Categoria: ${elementos.categoria} </p>
     <p> Descripción: ${elementos.descripcion} </p>
-    <button class="boton"> borrar </button>
+    <button class="button eliminar">Eliminar</button>
+    </div>
     `
   }) // el return lo que realiza es retornar los datos ingresados a la finalizar la funcion.
   productList.innerHTML = hoja // .innerHTML lo que permite es imprimir los datos directamente en el HTML. 
 }
+
+
+//==========================================//
+
+const formulario = document.querySelector('#formulario');
+const boton = document.querySelector('#boton');
+const resultado = document.querySelector('#resultado');
+
+const filtrar = ()=>{
+  //console.log(formulario.value);
+  resultado.innerHTML = '';
+  const texto = formulario.value.toLowerCase();
+  for(let busqueda of busquedas) {
+      let nombre = busqueda.nombre.toLocaleLowerCase();
+      if (nombre.indexOf(texto) !== -1){
+          resultado.innerHTML += `
+          <li>${busqueda.nombre}</li>
+          `
+      }
+  }
+  if(resultado.innerHTML === ''){
+      resultado.innerHTML += `
+      <li>producto no encontrado...</li>
+      `
+  }
+}
+boton.addEventListener('click', filtrar);
+formulario.addEventListener('keyup',filtrar);
+filtrar();
