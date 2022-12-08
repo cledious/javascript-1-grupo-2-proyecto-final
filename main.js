@@ -39,12 +39,14 @@ function imprimir() {
 
   const hoja = articulos.map(elementos => { //el .map lo que hace es recorrer el array y devolver un valor.
     return ` 
+    <div>
     <p> Nombre de producto:  ${elementos.nombre} </p>
     <p> Precio: ₡ ${elementos.precio} </p>
     <p> Cantidad de producto: ${elementos.cantidad} </p>
     <p> Categoria: ${elementos.categoria} </p>
     <p> Descripción: ${elementos.descripcion} </p>
-    <button class="boton"> borrar </button>
+    <button class="button eliminar">Eliminar</button>
+    </div>
     `
   }) // el return lo que realiza es retornar los datos ingresados a la finalizar la funcion.
   productList.innerHTML = hoja // .innerHTML lo que permite es imprimir los datos directamente en el HTML. 
